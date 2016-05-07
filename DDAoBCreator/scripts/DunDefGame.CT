@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="18">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"Item"</Description>
+      <Options moHideChildren="1"/>
+      <LastState Value="" Activated="1" RealAddress="20143240"/>
+      <Color>80000008</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>1</ID>
+          <Description>"Hero Health"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E40"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E40</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2</ID>
+          <Description>"Hero Speed"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E44"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E44</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4</ID>
+          <Description>"Hero Attack"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E48"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E48</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>5</ID>
+          <Description>"Hero Casting"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E4C"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E4C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>7</ID>
+          <Description>"Hero Ability 1"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E50"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E50</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>8</ID>
+          <Description>"Hero Ability 2"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E54"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E54</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>9</ID>
+          <Description>"Defense Health"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E58"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E58</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>10</ID>
+          <Description>"Defense Attack Rate"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E5C"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E5C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>12</ID>
+          <Description>"Defense Damage"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E60"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E60</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>13</ID>
+          <Description>"Defense Area of Effect"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E64"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E64</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>14</ID>
+          <Description>"Generic Resistance"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E6C"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E6C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>16</ID>
+          <Description>"Poison Resistance"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E74"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E74</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>17</ID>
+          <Description>"Fire Resistance"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E7C"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E7C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>18</ID>
+          <Description>"Lightning Resistance"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E84"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E84</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>20</ID>
+          <Description>"Damage"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E88"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E88</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>25</ID>
+          <Description>"Elemental Type"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E95"/>
+          <Color>80000008</Color>
+          <VariableType>Byte</VariableType>
+          <Address>1CE81E95</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26</ID>
+          <Description>"Elemental Damage"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E98"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E98</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>28</ID>
+          <Description>"Knockback"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81EB0"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81EB0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>32</ID>
+          <Description>"Charge Speed Bonus"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81EC8"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81EC8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>33</ID>
+          <Description>"Attack Speed"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81ECC"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81ECC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>21</ID>
+          <Description>"Projectile Count"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E8C"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E8C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>23</ID>
+          <Description>"Projectile Speed"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E90"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E90</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>29</ID>
+          <Description>"Ammo Capacity"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81EBC"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81EBC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>22</ID>
+          <Description>"Guardian Defense Number"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81E8C"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81E8C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>31</ID>
+          <Description>"Guardian Range"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81EBC"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81EBC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>27</ID>
+          <Description>"Locked?"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81EA9"/>
+          <Color>80000008</Color>
+          <VariableType>Byte</VariableType>
+          <Address>1CE81EA9</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>35</ID>
+          <Description>"Item Level"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81F58"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81F58</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>34</ID>
+          <Description>"Max Item Level"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81F20"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81F20</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>36</ID>
+          <Description>"Mana Invested"</Description>
+          <LastState Value="??" Activated="0" RealAddress="1CE81F5C"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1CE81F5C</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <Comments>Setting Up:
+
+Find items Hero Health memory adddress
+Right-click Item-&gt;Hero-&gt;Health
+Click "Recalculate New Addresses"
+Use "Change To Address"
+Paste/Type in address
+
+
+Elemental Type Values:
+212 - Poison
+220 - Fire
+226 - Lightning
+
+Locked Values
+0 - Unlocked
+128 - Locked</Comments>
+</CheatTable>
