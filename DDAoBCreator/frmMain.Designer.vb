@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class frmMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -181,7 +181,7 @@ Partial Class Form1
         Me.SaveToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
         Me.SaveToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.SaveToolStripMenuItem.Text = "&Save"
         '
         'OpenToolStripMenuItem
@@ -189,7 +189,7 @@ Partial Class Form1
         Me.OpenToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
         Me.OpenToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.OpenToolStripMenuItem.Text = "&Open"
         '
         'ToolStripMenuItem1
@@ -197,14 +197,14 @@ Partial Class Form1
         Me.ToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.ToolStripMenuItem1.ForeColor = System.Drawing.Color.White
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(100, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
         Me.ExitToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'EditToolStripMenuItem
@@ -1155,7 +1155,7 @@ Partial Class Form1
         '
         Me.ofd.FileName = "OpenFileDialog1"
         '
-        'Form1
+        'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -1172,7 +1172,7 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
-        Me.Name = "Form1"
+        Me.Name = "frmMain"
         Me.Text = "Dungeon Defenders Item AoB Creator"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

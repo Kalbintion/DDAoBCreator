@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class frmMain
     Public Sub updateAoB()
         Dim result As String = ""
 
@@ -104,132 +104,13 @@
         updateAoB()
     End Sub
 
-    Private Sub chkUnkHeroHealth_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroHealth.CheckedChanged
-        nudHeroHealth.Enabled = Not chkUnkHeroHealth.Checked
-    End Sub
-
-    Private Sub chkUnkHeroAttack_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroAttack.CheckedChanged
-        nudHeroAttack.Enabled = Not chkUnkHeroAttack.Checked
-    End Sub
-
-    Private Sub chkUnkHeroSpeed_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroSpeed.CheckedChanged
-        nudHeroSpeed.Enabled = Not chkUnkHeroSpeed.Checked
-    End Sub
-
-    Private Sub chkUnkHeroCasting_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroCasting.CheckedChanged
-        nudHeroCasting.Enabled = Not chkUnkHeroCasting.Checked
-    End Sub
-
-    Private Sub chkUnkHeroAbility1_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroAbility1.CheckedChanged
-        nudHeroAbility1.Enabled = Not chkUnkHeroAbility1.Checked
-    End Sub
-
-    Private Sub chkUnkHeroAbility2_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroAbility2.CheckedChanged
-        nudHeroAbility2.Enabled = Not chkUnkHeroAbility2.Checked
-    End Sub
-
-    Private Sub chkUnkDefenseHealth_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkDefenseHealth.CheckedChanged
-        nudDefenseHealth.Enabled = Not chkUnkDefenseHealth.Checked
-    End Sub
-
-    Private Sub chkUnkDefenseAttack_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkDefenseAttack.CheckedChanged
-        nudDefenseAttack.Enabled = Not chkUnkDefenseAttack.Checked
-    End Sub
-
-    Private Sub chkUnkDefenseDamage_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkDefenseDamage.CheckedChanged
-        nudDefenseDamage.Enabled = Not chkUnkDefenseDamage.Checked
-    End Sub
-
-    Private Sub chkUnkDefenseCasting_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkDefenseCasting.CheckedChanged
-        nudDefenseCasting.Enabled = Not chkUnkDefenseCasting.Checked
-    End Sub
-
-    Private Sub chkUnkResistGeneric_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkResistGeneric.CheckedChanged
-        nudResistGeneric.Enabled = Not chkUnkResistGeneric.Checked
-    End Sub
-
-    Private Sub chkUnkResistPoison_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkResistPoison.CheckedChanged
-        nudResistPoison.Enabled = Not chkUnkResistPoison.Checked
-    End Sub
-
-    Private Sub chkUnkResistFire_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkResistFire.CheckedChanged
-        nudResistFire.Enabled = Not chkUnkResistFire.Checked
-    End Sub
-
-    Private Sub chkUnkResistLightning_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkResistLightning.CheckedChanged
-        nudResistLightning.Enabled = Not chkUnkResistLightning.Checked
-    End Sub
-
-    Private Sub chkUnkItemDamage_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemDamage.CheckedChanged
-        nudItemDamage.Enabled = Not chkUnkItemDamage.Checked
-    End Sub
-
-    Private Sub chkUnkItemProjCnt_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemProjCnt.CheckedChanged
-        nudItemProjCnt.Enabled = Not chkUnkItemProjCnt.Checked
-    End Sub
-
-    Private Sub chkUnkItemProjSpeed_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemProjSpeed.CheckedChanged
-        nudItemProjSpeed.Enabled = Not chkUnkItemProjSpeed.Checked
-    End Sub
-
-    Private Sub chkUnkItemEleType_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemEleType.CheckedChanged
-        cmbItemEleType.Enabled = Not chkUnkItemEleType.Checked
-    End Sub
-
-    Private Sub chkUnkItemEleDamage_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemEleDamage.CheckedChanged
-        nudItemEleDamage.Enabled = Not chkUnkItemEleDamage.Checked
-    End Sub
-
-    Private Sub chkUnkItemLocked_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemLocked.CheckedChanged
-        chkItemLocked.Enabled = Not chkUnkItemLocked.Checked
-    End Sub
-
-    Private Sub chkUnkItemKnockback_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemKnockback.CheckedChanged
-        nudItemKnockback.Enabled = Not chkUnkItemKnockback.Checked
-    End Sub
-
-    Private Sub chkUnkItemAmmoCap_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemAmmoCap.CheckedChanged
-        nudItemAmmoCap.Enabled = Not chkUnkItemAmmoCap.Checked
-    End Sub
-
-    Private Sub chkUnkItemAttackSpeed_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemAttackSpeed.CheckedChanged
-        nudItemAttackSpeed.Enabled = Not chkUnkItemAttackSpeed.Checked
-    End Sub
-
-    Private Sub chkUnkItemMaxLevel_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemMaxLevel.CheckedChanged
-        nudItemMaxLevel.Enabled = Not chkUnkItemMaxLevel.Checked
-    End Sub
-
-    Private Sub chkUnkItemLevel_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemLevel.CheckedChanged
-        nudItemLevel.Enabled = Not chkUnkItemLevel.Checked
-    End Sub
-
-    Private Sub chkUnkItemManaInvested_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemManaInvested.CheckedChanged
-        nudItemManaInvested.Enabled = Not chkUnkItemManaInvested.Checked
-    End Sub
-
-    Private Sub txtAoB_Click(sender As Object, e As System.EventArgs) Handles txtAoB.Click
+    Private Sub txtAoB_Click(sender As Object, e As System.EventArgs) Handles txtAoB.Click, txtAoB.GotFocus
         txtAoB.SelectAll()
-    End Sub
-
-    Private Sub txtAoB_GotFocus(sender As Object, e As System.EventArgs) Handles txtAoB.GotFocus
-        txtAoB.SelectAll()
-    End Sub
-
-    Private Sub txtAoB_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtAoB.TextChanged
-
-    End Sub
-
-    Private Sub cmbItemEleType_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cmbItemEleType.SelectedIndexChanged
-
     End Sub
 
     Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        ' Initialize components
         cmbItemEleType.SelectedIndex = 0
-    End Sub
-
-    Private Sub ToggleUnknownToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ToggleUnknownToolStripMenuItem.Click
-
     End Sub
 
     Private Sub AllOnToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AllOnToolStripMenuItem.Click
@@ -302,9 +183,154 @@
         sfd.Filter = "KDK|*.kdk"
         Dim res As DialogResult = sfd.ShowDialog()
         If sfd.FileName <> "" Then
-            Dim fs As System.IO.FileStream = CType(sfd.OpenFile(), System.IO.FileStream)
-            fs.Write(System.Text.Encoding.ASCII.GetBytes(txtAoB.Text), 0, txtAoB.Text.Length)
-            fs.Close()
+            System.IO.File.WriteAllText(sfd.FileName.ToString(), txtAoB.Text)
         End If
     End Sub
+
+    Private Sub OpenToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles OpenToolStripMenuItem.Click
+        ofd.Title = "Open Item Information From..."
+        ofd.SupportMultiDottedExtensions = True
+        ofd.ShowHelp = False
+        ofd.Filter = "KDK|*.kdk"
+        Dim res As DialogResult = ofd.ShowDialog()
+        Dim contents As String = ""
+        If ofd.FileName = "" Then Return
+
+        contents = System.IO.File.ReadAllText(ofd.FileName.ToString())
+
+        Dim segments() As String = contents.Split(" ")
+
+        If segments.Length <> 68 Then
+            MessageBox.Show("File is invalid! Cannot be properly read. Missing or extra information." & Environment.NewLine & "Found " & segments.Length & " sections out of the expected 68", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
+        ' Reset everything
+        ResetAllToolStripMenuItem.PerformClick()
+
+        ' Load in values
+        nudHeroHealth.Value = transformValueReverse(segments(0))
+        nudHeroSpeed.Value = transformValueReverse(segments(1))
+        nudHeroAttack.Value = transformValueReverse(segments(2))
+        nudHeroCasting.Value = transformValueReverse(segments(3))
+        nudHeroAbility1.Value = transformValueReverse(segments(4))
+        nudHeroAbility2.Value = transformValueReverse(segments(5))
+        nudDefenseHealth.Value = transformValueReverse(segments(6))
+        nudDefenseAttack.Value = transformValueReverse(segments(7))
+        nudDefenseDamage.Value = transformValueReverse(segments(8))
+        nudDefenseCasting.Value = transformValueReverse(segments(9))
+        nudResistGeneric.Value = transformValueReverse(segments(11))
+        nudResistPoison.Value = transformValueReverse(segments(13))
+        nudResistFire.Value = transformValueReverse(segments(15))
+        nudResistLightning.Value = transformValueReverse(segments(17))
+        nudItemDamage.Value = transformValueReverse(segments(18))
+        nudItemProjCnt.Value = transformValueReverse(segments(19))
+        nudItemProjSpeed.Value = transformValueReverse(segments(20))
+
+    End Sub
+
+#Region "chkUnk* CheckedChanged Handlers"
+    Private Sub chkUnkHeroHealth_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroHealth.CheckedChanged
+        nudHeroHealth.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkHeroAttack_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroAttack.CheckedChanged
+        nudHeroAttack.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkHeroSpeed_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroSpeed.CheckedChanged
+        nudHeroSpeed.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkHeroCasting_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroCasting.CheckedChanged
+        nudHeroCasting.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkHeroAbility1_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroAbility1.CheckedChanged
+        nudHeroAbility1.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkHeroAbility2_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroAbility2.CheckedChanged
+        nudHeroAbility2.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkDefenseHealth_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkDefenseHealth.CheckedChanged
+        nudDefenseHealth.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkDefenseAttack_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkDefenseAttack.CheckedChanged
+        nudDefenseAttack.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkDefenseDamage_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkDefenseDamage.CheckedChanged
+        nudDefenseDamage.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkDefenseCasting_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkDefenseCasting.CheckedChanged
+        nudDefenseCasting.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkResistGeneric_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkResistGeneric.CheckedChanged
+        nudResistGeneric.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkResistPoison_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkResistPoison.CheckedChanged
+        nudResistPoison.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkResistFire_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkResistFire.CheckedChanged
+        nudResistFire.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkResistLightning_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkResistLightning.CheckedChanged
+        nudResistLightning.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkItemDamage_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemDamage.CheckedChanged
+        nudItemDamage.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkItemProjCnt_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemProjCnt.CheckedChanged
+        nudItemProjCnt.Enabled = Not sender.Checked
+    End Sub
+
+    Private Sub chkUnkItemProjSpeed_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemProjSpeed.CheckedChanged
+        nudItemProjSpeed.Enabled = Not chkUnkItemProjSpeed.Checked
+    End Sub
+
+    Private Sub chkUnkItemEleType_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemEleType.CheckedChanged
+        cmbItemEleType.Enabled = Not chkUnkItemEleType.Checked
+    End Sub
+
+    Private Sub chkUnkItemEleDamage_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemEleDamage.CheckedChanged
+        nudItemEleDamage.Enabled = Not chkUnkItemEleDamage.Checked
+    End Sub
+
+    Private Sub chkUnkItemLocked_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemLocked.CheckedChanged
+        chkItemLocked.Enabled = Not chkUnkItemLocked.Checked
+    End Sub
+
+    Private Sub chkUnkItemKnockback_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemKnockback.CheckedChanged
+        nudItemKnockback.Enabled = Not chkUnkItemKnockback.Checked
+    End Sub
+
+    Private Sub chkUnkItemAmmoCap_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemAmmoCap.CheckedChanged
+        nudItemAmmoCap.Enabled = Not chkUnkItemAmmoCap.Checked
+    End Sub
+
+    Private Sub chkUnkItemAttackSpeed_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemAttackSpeed.CheckedChanged
+        nudItemAttackSpeed.Enabled = Not chkUnkItemAttackSpeed.Checked
+    End Sub
+
+    Private Sub chkUnkItemMaxLevel_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemMaxLevel.CheckedChanged
+        nudItemMaxLevel.Enabled = Not chkUnkItemMaxLevel.Checked
+    End Sub
+
+    Private Sub chkUnkItemLevel_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemLevel.CheckedChanged
+        nudItemLevel.Enabled = Not chkUnkItemLevel.Checked
+    End Sub
+
+    Private Sub chkUnkItemManaInvested_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemManaInvested.CheckedChanged
+        nudItemManaInvested.Enabled = Not chkUnkItemManaInvested.Checked
+    End Sub
+#End Region 'chkUnk* CheckedChanged Handlers
 End Class
