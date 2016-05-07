@@ -1,0 +1,310 @@
+﻿Public Class Form1
+    Public Sub updateAoB()
+        Dim result As String = ""
+
+        result &= transformValue(chkUnkHeroHealth.Checked, nudHeroHealth.Value, 8)
+        result &= " " & transformValue(chkUnkHeroSpeed.Checked, nudHeroSpeed.Value, 8)
+        result &= " " & transformValue(chkUnkHeroAttack.Checked, nudHeroAttack.Value, 8)
+        result &= " " & transformValue(chkUnkHeroCasting.Checked, nudHeroCasting.Value, 8)
+        result &= " " & transformValue(chkUnkHeroAbility1.Checked, nudHeroAbility1.Value, 8)
+        result &= " " & transformValue(chkUnkHeroAbility2.Checked, nudHeroAbility2.Value, 8)
+        result &= " " & transformValue(chkUnkDefenseHealth.Checked, nudDefenseHealth.Value, 8)
+        result &= " " & transformValue(chkUnkDefenseAttack.Checked, nudDefenseAttack.Value, 8)
+        result &= " " & transformValue(chkUnkDefenseDamage.Checked, nudDefenseDamage.Value, 8)
+        result &= " " & transformValue(chkUnkDefenseCasting.Checked, nudDefenseCasting.Value, 8)
+        result &= " ????????"
+        result &= " " & transformValue(chkUnkResistGeneric.Checked, nudResistGeneric.Value, 8)
+        result &= " ????????"
+        result &= " " & transformValue(chkUnkResistPoison.Checked, nudResistPoison.Value, 8)
+        result &= " ????????"
+        result &= " " & transformValue(chkUnkResistFire.Checked, nudResistFire.Value, 8)
+        result &= " ????????"
+        result &= " " & transformValue(chkUnkResistLightning.Checked, nudResistLightning.Value, 8)
+        result &= " " & transformValue(chkUnkItemDamage.Checked, nudItemDamage.Value, 8)
+        result &= " " & transformValue(chkUnkItemProjCnt.Checked, nudItemProjCnt.Value, 8)
+        result &= " " & transformValue(chkUnkItemProjSpeed.Checked, nudItemProjSpeed.Value, 8)
+        result &= " ??"
+        result &= transformValue(chkUnkItemEleType.Checked, elementTypeNumber(cmbItemEleType.SelectedItem), 2)
+        result &= "????"
+        result &= " " & transformValue(chkUnkItemEleDamage.Checked, nudItemEleDamage.Value, 8)
+        result &= " ???????? ??????"
+        result &= transformValue(chkUnkItemLocked.Checked, lockedStatus(chkItemLocked.Checked), 2)
+        result &= " " & transformValue(chkUnkItemKnockback.Checked, nudItemKnockback.Value, 8)
+        result &= " ????????"
+        result &= " " & transformValue(chkUnkItemAmmoCap.Checked, nudItemAmmoCap.Value, 8)
+        result &= " ???????? ???????? ????????"
+        result &= " " & transformValue(chkUnkItemAttackSpeed.Checked, nudItemAttackSpeed.Value, 8)
+        result &= " ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ????????"
+        result &= " " & transformValue(chkUnkItemMaxLevel.Checked, nudItemMaxLevel.Value, 8)
+        result &= " ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ???????? ????????"
+        result &= " " & transformValue(chkUnkItemLevel.Checked, nudItemLevel.Value, 8)
+        result &= " " & transformValue(chkUnkItemManaInvested.Checked, nudItemManaInvested.Value, 8)
+
+
+        txtAoB.Text = result
+    End Sub
+
+    Public Function lockedStatus(status As Boolean) As Integer
+        If status Then
+            Return 128
+        Else
+            Return 0
+        End If
+    End Function
+
+    Public Function elementTypeNumber(name As String) As Integer
+        Select Case name
+            Case "Poison"
+                Return 226
+            Case "Lightning"
+                Return 212
+            Case "Fire"
+                Return 220
+        End Select
+        Return 0
+    End Function
+
+    Public Function transformValue(state As Boolean, num As Integer, size As Integer) As String
+        If state Then
+            Return Strings.StrDup(size, "?")
+        End If
+
+        Dim result As String = Hex(num)
+        Dim finalized As String = ""
+
+        If result.Length Mod 2 = 1 Then
+            result = "0" & result
+        End If
+
+        result = result.PadLeft(size, "0")
+
+        For i = (result.Length - 2) To 0 Step -2
+            finalized &= result.Substring(i, 2)
+        Next
+
+        Return finalized
+    End Function
+
+    Public Function transformValueReverse(num As String) As Integer
+        If num.Contains("?") Then
+            ' We're dealing with a section that are question marks in number, default to 0
+            Return 0
+        End If
+
+        Dim finalized As String = ""
+
+        For i = (num.Length - 2) To 0 Step -2
+            finalized &= num.Substring(i, 2)
+        Next
+
+        Return CInt("&H" & finalized)
+    End Function
+
+    Private Sub tmrAoBUpdate_Tick(sender As System.Object, e As System.EventArgs) Handles tmrAoBUpdate.Tick
+        updateAoB()
+    End Sub
+
+    Private Sub chkUnkHeroHealth_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroHealth.CheckedChanged
+        nudHeroHealth.Enabled = Not chkUnkHeroHealth.Checked
+    End Sub
+
+    Private Sub chkUnkHeroAttack_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroAttack.CheckedChanged
+        nudHeroAttack.Enabled = Not chkUnkHeroAttack.Checked
+    End Sub
+
+    Private Sub chkUnkHeroSpeed_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroSpeed.CheckedChanged
+        nudHeroSpeed.Enabled = Not chkUnkHeroSpeed.Checked
+    End Sub
+
+    Private Sub chkUnkHeroCasting_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroCasting.CheckedChanged
+        nudHeroCasting.Enabled = Not chkUnkHeroCasting.Checked
+    End Sub
+
+    Private Sub chkUnkHeroAbility1_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroAbility1.CheckedChanged
+        nudHeroAbility1.Enabled = Not chkUnkHeroAbility1.Checked
+    End Sub
+
+    Private Sub chkUnkHeroAbility2_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroAbility2.CheckedChanged
+        nudHeroAbility2.Enabled = Not chkUnkHeroAbility2.Checked
+    End Sub
+
+    Private Sub chkUnkDefenseHealth_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkDefenseHealth.CheckedChanged
+        nudDefenseHealth.Enabled = Not chkUnkDefenseHealth.Checked
+    End Sub
+
+    Private Sub chkUnkDefenseAttack_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkDefenseAttack.CheckedChanged
+        nudDefenseAttack.Enabled = Not chkUnkDefenseAttack.Checked
+    End Sub
+
+    Private Sub chkUnkDefenseDamage_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkDefenseDamage.CheckedChanged
+        nudDefenseDamage.Enabled = Not chkUnkDefenseDamage.Checked
+    End Sub
+
+    Private Sub chkUnkDefenseCasting_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkDefenseCasting.CheckedChanged
+        nudDefenseCasting.Enabled = Not chkUnkDefenseCasting.Checked
+    End Sub
+
+    Private Sub chkUnkResistGeneric_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkResistGeneric.CheckedChanged
+        nudResistGeneric.Enabled = Not chkUnkResistGeneric.Checked
+    End Sub
+
+    Private Sub chkUnkResistPoison_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkResistPoison.CheckedChanged
+        nudResistPoison.Enabled = Not chkUnkResistPoison.Checked
+    End Sub
+
+    Private Sub chkUnkResistFire_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkResistFire.CheckedChanged
+        nudResistFire.Enabled = Not chkUnkResistFire.Checked
+    End Sub
+
+    Private Sub chkUnkResistLightning_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkResistLightning.CheckedChanged
+        nudResistLightning.Enabled = Not chkUnkResistLightning.Checked
+    End Sub
+
+    Private Sub chkUnkItemDamage_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemDamage.CheckedChanged
+        nudItemDamage.Enabled = Not chkUnkItemDamage.Checked
+    End Sub
+
+    Private Sub chkUnkItemProjCnt_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemProjCnt.CheckedChanged
+        nudItemProjCnt.Enabled = Not chkUnkItemProjCnt.Checked
+    End Sub
+
+    Private Sub chkUnkItemProjSpeed_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemProjSpeed.CheckedChanged
+        nudItemProjSpeed.Enabled = Not chkUnkItemProjSpeed.Checked
+    End Sub
+
+    Private Sub chkUnkItemEleType_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemEleType.CheckedChanged
+        cmbItemEleType.Enabled = Not chkUnkItemEleType.Checked
+    End Sub
+
+    Private Sub chkUnkItemEleDamage_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemEleDamage.CheckedChanged
+        nudItemEleDamage.Enabled = Not chkUnkItemEleDamage.Checked
+    End Sub
+
+    Private Sub chkUnkItemLocked_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemLocked.CheckedChanged
+        chkItemLocked.Enabled = Not chkUnkItemLocked.Checked
+    End Sub
+
+    Private Sub chkUnkItemKnockback_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemKnockback.CheckedChanged
+        nudItemKnockback.Enabled = Not chkUnkItemKnockback.Checked
+    End Sub
+
+    Private Sub chkUnkItemAmmoCap_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemAmmoCap.CheckedChanged
+        nudItemAmmoCap.Enabled = Not chkUnkItemAmmoCap.Checked
+    End Sub
+
+    Private Sub chkUnkItemAttackSpeed_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemAttackSpeed.CheckedChanged
+        nudItemAttackSpeed.Enabled = Not chkUnkItemAttackSpeed.Checked
+    End Sub
+
+    Private Sub chkUnkItemMaxLevel_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemMaxLevel.CheckedChanged
+        nudItemMaxLevel.Enabled = Not chkUnkItemMaxLevel.Checked
+    End Sub
+
+    Private Sub chkUnkItemLevel_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemLevel.CheckedChanged
+        nudItemLevel.Enabled = Not chkUnkItemLevel.Checked
+    End Sub
+
+    Private Sub chkUnkItemManaInvested_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkItemManaInvested.CheckedChanged
+        nudItemManaInvested.Enabled = Not chkUnkItemManaInvested.Checked
+    End Sub
+
+    Private Sub txtAoB_Click(sender As Object, e As System.EventArgs) Handles txtAoB.Click
+        txtAoB.SelectAll()
+    End Sub
+
+    Private Sub txtAoB_GotFocus(sender As Object, e As System.EventArgs) Handles txtAoB.GotFocus
+        txtAoB.SelectAll()
+    End Sub
+
+    Private Sub txtAoB_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtAoB.TextChanged
+
+    End Sub
+
+    Private Sub cmbItemEleType_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cmbItemEleType.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        cmbItemEleType.SelectedIndex = 0
+    End Sub
+
+    Private Sub ToggleUnknownToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ToggleUnknownToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub AllOnToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AllOnToolStripMenuItem.Click
+        For Each cntrl As Control In Me.Controls
+            If TypeOf cntrl Is CheckBox Then
+                If cntrl.Name.Contains("Unk") Then
+                    Dim chkbox As CheckBox = cntrl
+                    chkbox.Checked = True
+                End If
+            End If
+        Next
+    End Sub
+
+    Private Sub AllOffToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AllOffToolStripMenuItem.Click
+        For Each cntrl As Control In Me.Controls
+            If TypeOf cntrl Is CheckBox Then
+                If cntrl.Name.Contains("Unk") Then
+                    Dim chkbox As CheckBox = cntrl
+                    chkbox.Checked = False
+                End If
+            End If
+        Next
+    End Sub
+
+    Private Sub ToggleToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ToggleToolStripMenuItem.Click
+        For Each cntrl As Control In Me.Controls
+            If TypeOf cntrl Is CheckBox Then
+                If cntrl.Name.Contains("Unk") Then
+                    Dim chkbox As CheckBox = cntrl
+                    chkbox.Checked = Not chkbox.Checked
+                End If
+            End If
+        Next
+    End Sub
+
+    Private Sub ResetAllToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ResetAllToolStripMenuItem.Click
+        For Each cntrl As Control In Me.Controls
+            resetControlsIn(cntrl.Controls)
+        Next
+        chkItemLocked.Checked = False
+        cmbItemEleType.SelectedIndex = 0
+    End Sub
+
+    Private Sub resetControlsIn(cntrlGrp As System.Windows.Forms.Control.ControlCollection)
+        For Each cntrl As Control In cntrlGrp
+            Console.WriteLine("Checking " & cntrl.Name)
+            If TypeOf cntrl Is CheckBox Then
+                Console.WriteLine("Found as CheckBox: " & cntrl.Name)
+                If cntrl.Name.Contains("Unk") Then
+                    Dim chkbox As CheckBox = cntrl
+                    If cntrl.Name.Contains("UnkItemDamage") Or cntrl.Name.Contains("ItemEleDamage") Or cntrl.Name.Contains("ItemManaInvested") Then
+                        chkbox.Checked = True
+                    Else
+                        chkbox.Checked = False
+                    End If
+                End If
+            ElseIf TypeOf cntrl Is NumericUpDown Then
+                Dim nud As NumericUpDown = cntrl
+                nud.Value = 0
+            End If
+        Next
+    End Sub
+
+    Private Sub SaveToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles SaveToolStripMenuItem.Click
+        sfd.Title = "Save Item Information To..."
+        sfd.SupportMultiDottedExtensions = True
+        sfd.ShowHelp = False
+        sfd.OverwritePrompt = True
+        sfd.RestoreDirectory = True
+        sfd.Filter = "KDK|*.kdk"
+        Dim res As DialogResult = sfd.ShowDialog()
+        If sfd.FileName <> "" Then
+            Dim fs As System.IO.FileStream = CType(sfd.OpenFile(), System.IO.FileStream)
+            fs.Write(System.Text.Encoding.ASCII.GetBytes(txtAoB.Text), 0, txtAoB.Text.Length)
+            fs.Close()
+        End If
+    End Sub
+End Class
