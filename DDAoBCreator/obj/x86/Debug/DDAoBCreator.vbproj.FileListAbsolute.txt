@@ -1,9 +1,9 @@
 C:\Projects\VS10\DDAoBCreator\DDAoBCreator\bin\Debug\DDAoBCreator.exe
 C:\Projects\VS10\DDAoBCreator\DDAoBCreator\bin\Debug\DDAoBCreator.pdb
 C:\Projects\VS10\DDAoBCreator\DDAoBCreator\bin\Debug\DDAoBCreator.xml
-C:\Projects\VS10\DDAoBCreator\DDAoBCreator\obj\x86\Debug\DDAoBCreator.Form1.resources
 C:\Projects\VS10\DDAoBCreator\DDAoBCreator\obj\x86\Debug\DDAoBCreator.Resources.resources
 C:\Projects\VS10\DDAoBCreator\DDAoBCreator\obj\x86\Debug\DDAoBCreator.vbproj.GenerateResource.Cache
 C:\Projects\VS10\DDAoBCreator\DDAoBCreator\obj\x86\Debug\DDAoBCreator.exe
 C:\Projects\VS10\DDAoBCreator\DDAoBCreator\obj\x86\Debug\DDAoBCreator.xml
 C:\Projects\VS10\DDAoBCreator\DDAoBCreator\obj\x86\Debug\DDAoBCreator.pdb
+C:\Projects\VS10\DDAoBCreator\DDAoBCreator\obj\x86\Debug\DDAoBCreator.frmMain.resources

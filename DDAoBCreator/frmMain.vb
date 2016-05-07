@@ -52,6 +52,10 @@
         End If
     End Function
 
+    Public Function lockedStatusReverse(num As Integer) As Boolean
+        If num = 128 Then Return True Else Return False
+    End Function
+
     Public Function elementTypeNumber(name As String) As Integer
         Select Case name
             Case "Poison"
@@ -61,6 +65,16 @@
             Case "Fire"
                 Return 220
         End Select
+        Return 0
+    End Function
+
+    Public Function elementIndexFromNumber(num As Integer) As Integer
+        For i = 0 To cmbItemEleType.Items.Count - 1
+            If num = elementTypeNumber(cmbItemEleType.Items(i)) Then
+                Return i
+            End If
+        Next
+        ' in the event the number cannot be matched to anything at all, default to "None"
         Return 0
     End Function
 
@@ -111,6 +125,11 @@
     Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ' Initialize components
         cmbItemEleType.SelectedIndex = 0
+
+        Console.WriteLine(elementIndexFromNumber(212))
+        Console.WriteLine(elementIndexFromNumber(226))
+        Console.WriteLine(elementIndexFromNumber(220))
+        Console.WriteLine(elementIndexFromNumber(0))
     End Sub
 
     Private Sub AllOnToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AllOnToolStripMenuItem.Click
@@ -156,9 +175,7 @@
 
     Private Sub resetControlsIn(cntrlGrp As System.Windows.Forms.Control.ControlCollection)
         For Each cntrl As Control In cntrlGrp
-            Console.WriteLine("Checking " & cntrl.Name)
             If TypeOf cntrl Is CheckBox Then
-                Console.WriteLine("Found as CheckBox: " & cntrl.Name)
                 If cntrl.Name.Contains("Unk") Then
                     Dim chkbox As CheckBox = cntrl
                     If cntrl.Name.Contains("UnkItemDamage") Or cntrl.Name.Contains("ItemEleDamage") Or cntrl.Name.Contains("ItemManaInvested") Then
@@ -225,7 +242,15 @@
         nudItemDamage.Value = transformValueReverse(segments(18))
         nudItemProjCnt.Value = transformValueReverse(segments(19))
         nudItemProjSpeed.Value = transformValueReverse(segments(20))
-
+        cmbItemEleType.SelectedIndex = elementIndexFromNumber(transformValueReverse(segments(21).Substring(2, 2)))
+        nudItemEleDamage.Value = transformValueReverse(segments(22))
+        chkItemLocked.Checked = lockedStatusReverse(transformValueReverse(segments(24).Substring(5, 2)))
+        nudItemKnockback.Value = transformValueReverse(segments(25))
+        nudItemAmmoCap.Value = transformValueReverse(segments(27))
+        nudItemAttackSpeed.Value = transformValueReverse(segments(31))
+        nudItemMaxLevel.Value = transformValueReverse(segments(53))
+        nudItemLevel.Value = transformValueReverse(segments(66))
+        nudItemManaInvested.Value = transformValueReverse(segments(67))
     End Sub
 
 #Region "chkUnk* CheckedChanged Handlers"
