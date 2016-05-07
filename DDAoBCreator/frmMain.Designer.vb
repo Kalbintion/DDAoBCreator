@@ -181,7 +181,7 @@ Partial Class frmMain
         Me.SaveToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
         Me.SaveToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveToolStripMenuItem.Text = "&Save"
         '
         'OpenToolStripMenuItem
@@ -189,7 +189,7 @@ Partial Class frmMain
         Me.OpenToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
         Me.OpenToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OpenToolStripMenuItem.Text = "&Open"
         '
         'ToolStripMenuItem1
@@ -197,14 +197,14 @@ Partial Class frmMain
         Me.ToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.ToolStripMenuItem1.ForeColor = System.Drawing.Color.White
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(100, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(149, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
         Me.ExitToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'EditToolStripMenuItem
@@ -1132,7 +1132,7 @@ Partial Class frmMain
         Me.grpAoB.ForeColor = System.Drawing.Color.White
         Me.grpAoB.Location = New System.Drawing.Point(236, 390)
         Me.grpAoB.Name = "grpAoB"
-        Me.grpAoB.Size = New System.Drawing.Size(297, 187)
+        Me.grpAoB.Size = New System.Drawing.Size(297, 137)
         Me.grpAoB.TabIndex = 17
         Me.grpAoB.TabStop = False
         Me.grpAoB.Text = "AoB"
@@ -1144,7 +1144,7 @@ Partial Class frmMain
         Me.txtAoB.Name = "txtAoB"
         Me.txtAoB.ReadOnly = True
         Me.txtAoB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtAoB.Size = New System.Drawing.Size(283, 159)
+        Me.txtAoB.Size = New System.Drawing.Size(283, 105)
         Me.txtAoB.TabIndex = 0
         '
         'tmrAoBUpdate
@@ -1160,7 +1160,7 @@ Partial Class frmMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(544, 589)
+        Me.ClientSize = New System.Drawing.Size(544, 539)
         Me.Controls.Add(Me.grpAoB)
         Me.Controls.Add(Me.grpItem)
         Me.Controls.Add(Me.grpResist)
@@ -1169,7 +1169,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.White
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.Name = "frmMain"
