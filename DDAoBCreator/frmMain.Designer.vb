@@ -124,6 +124,8 @@ Partial Class frmMain
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.sfd = New System.Windows.Forms.SaveFileDialog()
         Me.ofd = New System.Windows.Forms.OpenFileDialog()
+        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AlwaysOnTopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.grpHero.SuspendLayout()
         CType(Me.nudHeroAbility2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -159,7 +161,7 @@ Partial Class frmMain
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
@@ -179,7 +181,7 @@ Partial Class frmMain
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
-        Me.SaveToolStripMenuItem.ForeColor = System.Drawing.Color.Black
+        Me.SaveToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveToolStripMenuItem.Text = "&Save"
@@ -187,7 +189,7 @@ Partial Class frmMain
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
-        Me.OpenToolStripMenuItem.ForeColor = System.Drawing.Color.Black
+        Me.OpenToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
         Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OpenToolStripMenuItem.Text = "&Open"
@@ -202,7 +204,7 @@ Partial Class frmMain
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
-        Me.ExitToolStripMenuItem.ForeColor = System.Drawing.Color.Black
+        Me.ExitToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
@@ -218,33 +220,38 @@ Partial Class frmMain
         'ToggleUnknownToolStripMenuItem
         '
         Me.ToggleUnknownToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AllOnToolStripMenuItem, Me.AllOffToolStripMenuItem, Me.ToggleToolStripMenuItem})
+        Me.ToggleUnknownToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ToggleUnknownToolStripMenuItem.Name = "ToggleUnknownToolStripMenuItem"
         Me.ToggleUnknownToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.ToggleUnknownToolStripMenuItem.Text = "Toggle &Unknown"
         '
         'AllOnToolStripMenuItem
         '
+        Me.AllOnToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.AllOnToolStripMenuItem.Name = "AllOnToolStripMenuItem"
         Me.AllOnToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6
-        Me.AllOnToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.AllOnToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AllOnToolStripMenuItem.Text = "All &On"
         '
         'AllOffToolStripMenuItem
         '
+        Me.AllOffToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.AllOffToolStripMenuItem.Name = "AllOffToolStripMenuItem"
         Me.AllOffToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F7
-        Me.AllOffToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.AllOffToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AllOffToolStripMenuItem.Text = "All O&ff"
         '
         'ToggleToolStripMenuItem
         '
+        Me.ToggleToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ToggleToolStripMenuItem.Name = "ToggleToolStripMenuItem"
         Me.ToggleToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F8
-        Me.ToggleToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.ToggleToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ToggleToolStripMenuItem.Text = "&Toggle"
         '
         'ResetAllToolStripMenuItem
         '
+        Me.ResetAllToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ResetAllToolStripMenuItem.Name = "ResetAllToolStripMenuItem"
         Me.ResetAllToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
         Me.ResetAllToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
@@ -1155,6 +1162,22 @@ Partial Class frmMain
         '
         Me.ofd.FileName = "OpenFileDialog1"
         '
+        'ViewToolStripMenuItem
+        '
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlwaysOnTopToolStripMenuItem})
+        Me.ViewToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.ViewToolStripMenuItem.Text = "&View"
+        '
+        'AlwaysOnTopToolStripMenuItem
+        '
+        Me.AlwaysOnTopToolStripMenuItem.CheckOnClick = True
+        Me.AlwaysOnTopToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.AlwaysOnTopToolStripMenuItem.Name = "AlwaysOnTopToolStripMenuItem"
+        Me.AlwaysOnTopToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+        Me.AlwaysOnTopToolStripMenuItem.Text = "&Always On Top"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
@@ -1314,5 +1337,7 @@ Partial Class frmMain
     Friend WithEvents ToggleToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents sfd As System.Windows.Forms.SaveFileDialog
     Friend WithEvents ofd As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents ViewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AlwaysOnTopToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

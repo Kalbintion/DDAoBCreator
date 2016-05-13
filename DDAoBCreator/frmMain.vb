@@ -124,53 +124,15 @@
 
     Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ' Initialize components
+        MenuStrip1.RenderMode = ToolStripRenderMode.Professional
+        MenuStrip1.Renderer = customMenuRenderer
+
         cmbItemEleType.SelectedIndex = 0
 
         Console.WriteLine(elementIndexFromNumber(212))
         Console.WriteLine(elementIndexFromNumber(226))
         Console.WriteLine(elementIndexFromNumber(220))
         Console.WriteLine(elementIndexFromNumber(0))
-    End Sub
-
-    Private Sub AllOnToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AllOnToolStripMenuItem.Click
-        For Each cntrl As Control In Me.Controls
-            If TypeOf cntrl Is CheckBox Then
-                If cntrl.Name.Contains("Unk") Then
-                    Dim chkbox As CheckBox = cntrl
-                    chkbox.Checked = True
-                End If
-            End If
-        Next
-    End Sub
-
-    Private Sub AllOffToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AllOffToolStripMenuItem.Click
-        For Each cntrl As Control In Me.Controls
-            If TypeOf cntrl Is CheckBox Then
-                If cntrl.Name.Contains("Unk") Then
-                    Dim chkbox As CheckBox = cntrl
-                    chkbox.Checked = False
-                End If
-            End If
-        Next
-    End Sub
-
-    Private Sub ToggleToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ToggleToolStripMenuItem.Click
-        For Each cntrl As Control In Me.Controls
-            If TypeOf cntrl Is CheckBox Then
-                If cntrl.Name.Contains("Unk") Then
-                    Dim chkbox As CheckBox = cntrl
-                    chkbox.Checked = Not chkbox.Checked
-                End If
-            End If
-        Next
-    End Sub
-
-    Private Sub ResetAllToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ResetAllToolStripMenuItem.Click
-        For Each cntrl As Control In Me.Controls
-            resetControlsIn(cntrl.Controls)
-        Next
-        chkItemLocked.Checked = False
-        cmbItemEleType.SelectedIndex = 0
     End Sub
 
     Private Sub resetControlsIn(cntrlGrp As System.Windows.Forms.Control.ControlCollection)
@@ -190,6 +152,114 @@
             End If
         Next
     End Sub
+
+#Region "MenuStrip"
+
+#Region "CustomRenderer"
+    Dim customMenuRenderer As New System.Windows.Forms.ToolStripProfessionalRenderer(New MenuStripRenderer)
+
+    Public Class MenuStripRenderer
+        Inherits ProfessionalColorTable
+        Private ReadOnly background As System.Drawing.Color = Color.FromArgb(68, 77, 100)
+        Private ReadOnly backgroundLight As System.Drawing.Color = Color.FromArgb(128, 77 + 60, 160)
+
+        Public Overrides ReadOnly Property MenuItemSelected As System.Drawing.Color
+            Get
+                Return backgroundLight
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property MenuItemPressedGradientBegin As System.Drawing.Color
+            Get
+                Return background
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property MenuItemPressedGradientEnd As System.Drawing.Color
+            Get
+                Return background
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property SeparatorLight As System.Drawing.Color
+            Get
+                Return backgroundLight
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property SeparatorDark As System.Drawing.Color
+            Get
+                Return backgroundLight
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property MenuBorder As System.Drawing.Color
+            Get
+                Return backgroundLight
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property ToolStripDropDownBackground As System.Drawing.Color
+            Get
+                Return background
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property ImageMarginGradientBegin As System.Drawing.Color
+            Get
+                Return background
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property ImageMarginGradientEnd As System.Drawing.Color
+            Get
+                Return background
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property ImageMarginGradientMiddle As System.Drawing.Color
+            Get
+                Return background
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property MenuItemBorder As System.Drawing.Color
+            Get
+                Return backgroundLight
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property ButtonCheckedHighlightBorder As System.Drawing.Color
+            Get
+                Return backgroundLight
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property ButtonPressedBorder As System.Drawing.Color
+            Get
+                Return backgroundLight
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property ToolStripBorder As System.Drawing.Color
+            Get
+                Return backgroundLight
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property ButtonSelectedHighlightBorder As System.Drawing.Color
+            Get
+                Return background
+            End Get
+        End Property
+
+        Public Overrides ReadOnly Property ButtonSelectedBorder As System.Drawing.Color
+            Get
+                Return background
+            End Get
+        End Property
+    End Class
+#End Region
 
     Private Sub SaveToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles SaveToolStripMenuItem.Click
         sfd.Title = "Save Item Information To..."
@@ -252,6 +322,53 @@
         nudItemLevel.Value = transformValueReverse(segments(66))
         nudItemManaInvested.Value = transformValueReverse(segments(67))
     End Sub
+
+    Private Sub AllOnToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AllOnToolStripMenuItem.Click
+        For Each cntrl As Control In Me.Controls
+            If TypeOf cntrl Is CheckBox Then
+                If cntrl.Name.Contains("Unk") Then
+                    Dim chkbox As CheckBox = cntrl
+                    chkbox.Checked = True
+                End If
+            End If
+        Next
+    End Sub
+
+    Private Sub AllOffToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AllOffToolStripMenuItem.Click
+        For Each cntrl As Control In Me.Controls
+            If TypeOf cntrl Is CheckBox Then
+                If cntrl.Name.Contains("Unk") Then
+                    Dim chkbox As CheckBox = cntrl
+                    chkbox.Checked = False
+                End If
+            End If
+        Next
+    End Sub
+
+    Private Sub ToggleToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ToggleToolStripMenuItem.Click
+        For Each cntrl As Control In Me.Controls
+            If TypeOf cntrl Is CheckBox Then
+                If cntrl.Name.Contains("Unk") Then
+                    Dim chkbox As CheckBox = cntrl
+                    chkbox.Checked = Not chkbox.Checked
+                End If
+            End If
+        Next
+    End Sub
+
+    Private Sub ResetAllToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ResetAllToolStripMenuItem.Click
+        For Each cntrl As Control In Me.Controls
+            resetControlsIn(cntrl.Controls)
+        Next
+        chkItemLocked.Checked = False
+        cmbItemEleType.SelectedIndex = 0
+    End Sub
+
+    Private Sub AlwaysOnTopToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AlwaysOnTopToolStripMenuItem.Click
+        Me.TopMost = CType(sender, ToolStripMenuItem).Checked
+    End Sub
+
+#End Region
 
 #Region "chkUnk* CheckedChanged Handlers"
     Private Sub chkUnkHeroHealth_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkUnkHeroHealth.CheckedChanged
@@ -358,4 +475,5 @@
         nudItemManaInvested.Enabled = Not chkUnkItemManaInvested.Checked
     End Sub
 #End Region 'chkUnk* CheckedChanged Handlers
+
 End Class
