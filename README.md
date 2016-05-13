@@ -1,4 +1,4 @@
-# Dungeon Defeners Array of Bytes Creator
+# Dungeon Defenders Array of Bytes Creator
 ## About
 : Application written for the sole purpose of creating an array of bytes for item look-ups and modifications
 
