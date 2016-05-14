@@ -476,4 +476,7 @@
     End Sub
 #End Region 'chkUnk* CheckedChanged Handlers
 
+    Private Sub AoBCompareToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AoBCompareToolStripMenuItem.Click
+        frmCompare.Show()
+    End Sub
 End Class

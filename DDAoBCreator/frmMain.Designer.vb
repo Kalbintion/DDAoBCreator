@@ -126,6 +126,7 @@ Partial Class frmMain
         Me.ofd = New System.Windows.Forms.OpenFileDialog()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AlwaysOnTopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AoBCompareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.grpHero.SuspendLayout()
         CType(Me.nudHeroAbility2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -162,6 +163,7 @@ Partial Class frmMain
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem})
+        Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
@@ -291,7 +293,7 @@ Partial Class frmMain
         Me.chkUnkHeroAbility2.Location = New System.Drawing.Point(7, 169)
         Me.chkUnkHeroAbility2.Name = "chkUnkHeroAbility2"
         Me.chkUnkHeroAbility2.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkHeroAbility2.TabIndex = 21
+        Me.chkUnkHeroAbility2.TabIndex = 11
         Me.ttMain.SetToolTip(Me.chkUnkHeroAbility2, "Is Value Unknown?")
         Me.chkUnkHeroAbility2.UseVisualStyleBackColor = True
         '
@@ -301,7 +303,7 @@ Partial Class frmMain
         Me.chkUnkHeroAbility1.Location = New System.Drawing.Point(7, 141)
         Me.chkUnkHeroAbility1.Name = "chkUnkHeroAbility1"
         Me.chkUnkHeroAbility1.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkHeroAbility1.TabIndex = 20
+        Me.chkUnkHeroAbility1.TabIndex = 9
         Me.ttMain.SetToolTip(Me.chkUnkHeroAbility1, "Is Value Unknown?")
         Me.chkUnkHeroAbility1.UseVisualStyleBackColor = True
         '
@@ -311,7 +313,7 @@ Partial Class frmMain
         Me.chkUnkHeroCasting.Location = New System.Drawing.Point(7, 113)
         Me.chkUnkHeroCasting.Name = "chkUnkHeroCasting"
         Me.chkUnkHeroCasting.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkHeroCasting.TabIndex = 19
+        Me.chkUnkHeroCasting.TabIndex = 7
         Me.ttMain.SetToolTip(Me.chkUnkHeroCasting, "Is Value Unknown?")
         Me.chkUnkHeroCasting.UseVisualStyleBackColor = True
         '
@@ -321,7 +323,7 @@ Partial Class frmMain
         Me.chkUnkHeroSpeed.Location = New System.Drawing.Point(7, 85)
         Me.chkUnkHeroSpeed.Name = "chkUnkHeroSpeed"
         Me.chkUnkHeroSpeed.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkHeroSpeed.TabIndex = 18
+        Me.chkUnkHeroSpeed.TabIndex = 5
         Me.ttMain.SetToolTip(Me.chkUnkHeroSpeed, "Is Value Unknown?")
         Me.chkUnkHeroSpeed.UseVisualStyleBackColor = True
         '
@@ -331,7 +333,7 @@ Partial Class frmMain
         Me.chkUnkHeroAttack.Location = New System.Drawing.Point(7, 57)
         Me.chkUnkHeroAttack.Name = "chkUnkHeroAttack"
         Me.chkUnkHeroAttack.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkHeroAttack.TabIndex = 17
+        Me.chkUnkHeroAttack.TabIndex = 3
         Me.ttMain.SetToolTip(Me.chkUnkHeroAttack, "Is Value Unknown?")
         Me.chkUnkHeroAttack.UseVisualStyleBackColor = True
         '
@@ -341,7 +343,7 @@ Partial Class frmMain
         Me.chkUnkHeroHealth.Location = New System.Drawing.Point(7, 29)
         Me.chkUnkHeroHealth.Name = "chkUnkHeroHealth"
         Me.chkUnkHeroHealth.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkHeroHealth.TabIndex = 16
+        Me.chkUnkHeroHealth.TabIndex = 1
         Me.ttMain.SetToolTip(Me.chkUnkHeroHealth, "Is Value Unknown?")
         Me.chkUnkHeroHealth.UseVisualStyleBackColor = True
         '
@@ -362,7 +364,7 @@ Partial Class frmMain
         Me.nudHeroAbility2.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudHeroAbility2.Name = "nudHeroAbility2"
         Me.nudHeroAbility2.Size = New System.Drawing.Size(101, 20)
-        Me.nudHeroAbility2.TabIndex = 14
+        Me.nudHeroAbility2.TabIndex = 12
         Me.ttMain.SetToolTip(Me.nudHeroAbility2, "Hero Ability 2 Stat")
         '
         'nudHeroAbility1
@@ -372,7 +374,7 @@ Partial Class frmMain
         Me.nudHeroAbility1.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudHeroAbility1.Name = "nudHeroAbility1"
         Me.nudHeroAbility1.Size = New System.Drawing.Size(101, 20)
-        Me.nudHeroAbility1.TabIndex = 13
+        Me.nudHeroAbility1.TabIndex = 10
         Me.ttMain.SetToolTip(Me.nudHeroAbility1, resources.GetString("nudHeroAbility1.ToolTip"))
         '
         'Label9
@@ -392,7 +394,7 @@ Partial Class frmMain
         Me.nudHeroCasting.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudHeroCasting.Name = "nudHeroCasting"
         Me.nudHeroCasting.Size = New System.Drawing.Size(101, 20)
-        Me.nudHeroCasting.TabIndex = 11
+        Me.nudHeroCasting.TabIndex = 8
         Me.ttMain.SetToolTip(Me.nudHeroCasting, "Hero Casting Rate Stat")
         '
         'nudHeroSpeed
@@ -402,7 +404,7 @@ Partial Class frmMain
         Me.nudHeroSpeed.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudHeroSpeed.Name = "nudHeroSpeed"
         Me.nudHeroSpeed.Size = New System.Drawing.Size(101, 20)
-        Me.nudHeroSpeed.TabIndex = 10
+        Me.nudHeroSpeed.TabIndex = 6
         Me.ttMain.SetToolTip(Me.nudHeroSpeed, "Hero Speed Stat")
         '
         'nudHeroAttack
@@ -412,7 +414,7 @@ Partial Class frmMain
         Me.nudHeroAttack.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudHeroAttack.Name = "nudHeroAttack"
         Me.nudHeroAttack.Size = New System.Drawing.Size(101, 20)
-        Me.nudHeroAttack.TabIndex = 9
+        Me.nudHeroAttack.TabIndex = 4
         Me.ttMain.SetToolTip(Me.nudHeroAttack, "Hero Damage Stat")
         '
         'nudHeroHealth
@@ -422,7 +424,7 @@ Partial Class frmMain
         Me.nudHeroHealth.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudHeroHealth.Name = "nudHeroHealth"
         Me.nudHeroHealth.Size = New System.Drawing.Size(101, 20)
-        Me.nudHeroHealth.TabIndex = 8
+        Me.nudHeroHealth.TabIndex = 2
         Me.ttMain.SetToolTip(Me.nudHeroHealth, "Hero Health Stat")
         '
         'Label4
@@ -493,7 +495,7 @@ Partial Class frmMain
         Me.chkUnkDefenseCasting.Location = New System.Drawing.Point(7, 113)
         Me.chkUnkDefenseCasting.Name = "chkUnkDefenseCasting"
         Me.chkUnkDefenseCasting.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkDefenseCasting.TabIndex = 25
+        Me.chkUnkDefenseCasting.TabIndex = 19
         Me.ttMain.SetToolTip(Me.chkUnkDefenseCasting, "Is Value Unknown?")
         Me.chkUnkDefenseCasting.UseVisualStyleBackColor = True
         '
@@ -503,7 +505,7 @@ Partial Class frmMain
         Me.chkUnkDefenseDamage.Location = New System.Drawing.Point(7, 85)
         Me.chkUnkDefenseDamage.Name = "chkUnkDefenseDamage"
         Me.chkUnkDefenseDamage.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkDefenseDamage.TabIndex = 24
+        Me.chkUnkDefenseDamage.TabIndex = 17
         Me.ttMain.SetToolTip(Me.chkUnkDefenseDamage, "Is Value Unknown?")
         Me.chkUnkDefenseDamage.UseVisualStyleBackColor = True
         '
@@ -513,7 +515,7 @@ Partial Class frmMain
         Me.chkUnkDefenseAttack.Location = New System.Drawing.Point(7, 57)
         Me.chkUnkDefenseAttack.Name = "chkUnkDefenseAttack"
         Me.chkUnkDefenseAttack.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkDefenseAttack.TabIndex = 23
+        Me.chkUnkDefenseAttack.TabIndex = 15
         Me.ttMain.SetToolTip(Me.chkUnkDefenseAttack, "Is Value Unknown?")
         Me.chkUnkDefenseAttack.UseVisualStyleBackColor = True
         '
@@ -523,7 +525,7 @@ Partial Class frmMain
         Me.chkUnkDefenseHealth.Location = New System.Drawing.Point(7, 29)
         Me.chkUnkDefenseHealth.Name = "chkUnkDefenseHealth"
         Me.chkUnkDefenseHealth.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkDefenseHealth.TabIndex = 22
+        Me.chkUnkDefenseHealth.TabIndex = 13
         Me.ttMain.SetToolTip(Me.chkUnkDefenseHealth, "Is Value Unknown?")
         Me.chkUnkDefenseHealth.UseVisualStyleBackColor = True
         '
@@ -534,7 +536,7 @@ Partial Class frmMain
         Me.nudDefenseCasting.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudDefenseCasting.Name = "nudDefenseCasting"
         Me.nudDefenseCasting.Size = New System.Drawing.Size(101, 20)
-        Me.nudDefenseCasting.TabIndex = 11
+        Me.nudDefenseCasting.TabIndex = 20
         Me.ttMain.SetToolTip(Me.nudDefenseCasting, "Defense Area of Effect" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Aura Radius")
         '
         'nudDefenseDamage
@@ -544,7 +546,7 @@ Partial Class frmMain
         Me.nudDefenseDamage.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudDefenseDamage.Name = "nudDefenseDamage"
         Me.nudDefenseDamage.Size = New System.Drawing.Size(101, 20)
-        Me.nudDefenseDamage.TabIndex = 10
+        Me.nudDefenseDamage.TabIndex = 18
         Me.ttMain.SetToolTip(Me.nudDefenseDamage, "Defense Damage" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Aura Effect Strength")
         '
         'nudDefenseAttack
@@ -554,7 +556,7 @@ Partial Class frmMain
         Me.nudDefenseAttack.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudDefenseAttack.Name = "nudDefenseAttack"
         Me.nudDefenseAttack.Size = New System.Drawing.Size(101, 20)
-        Me.nudDefenseAttack.TabIndex = 9
+        Me.nudDefenseAttack.TabIndex = 16
         Me.ttMain.SetToolTip(Me.nudDefenseAttack, "Defense Attack Rate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Aura Effect Speed")
         '
         'nudDefenseHealth
@@ -564,7 +566,7 @@ Partial Class frmMain
         Me.nudDefenseHealth.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudDefenseHealth.Name = "nudDefenseHealth"
         Me.nudDefenseHealth.Size = New System.Drawing.Size(101, 20)
-        Me.nudDefenseHealth.TabIndex = 8
+        Me.nudDefenseHealth.TabIndex = 14
         Me.ttMain.SetToolTip(Me.nudDefenseHealth, "Defense Health Boost" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Aura Lifespan")
         '
         'Label5
@@ -625,7 +627,7 @@ Partial Class frmMain
         Me.grpResist.Location = New System.Drawing.Point(14, 377)
         Me.grpResist.Name = "grpResist"
         Me.grpResist.Size = New System.Drawing.Size(216, 140)
-        Me.grpResist.TabIndex = 13
+        Me.grpResist.TabIndex = 28
         Me.grpResist.TabStop = False
         Me.grpResist.Text = "Resistances"
         '
@@ -635,7 +637,7 @@ Partial Class frmMain
         Me.chkUnkResistLightning.Location = New System.Drawing.Point(7, 113)
         Me.chkUnkResistLightning.Name = "chkUnkResistLightning"
         Me.chkUnkResistLightning.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkResistLightning.TabIndex = 29
+        Me.chkUnkResistLightning.TabIndex = 27
         Me.ttMain.SetToolTip(Me.chkUnkResistLightning, "Is Value Unknown?")
         Me.chkUnkResistLightning.UseVisualStyleBackColor = True
         '
@@ -645,7 +647,7 @@ Partial Class frmMain
         Me.chkUnkResistFire.Location = New System.Drawing.Point(7, 85)
         Me.chkUnkResistFire.Name = "chkUnkResistFire"
         Me.chkUnkResistFire.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkResistFire.TabIndex = 28
+        Me.chkUnkResistFire.TabIndex = 25
         Me.ttMain.SetToolTip(Me.chkUnkResistFire, "Is Value Unknown?")
         Me.chkUnkResistFire.UseVisualStyleBackColor = True
         '
@@ -655,7 +657,7 @@ Partial Class frmMain
         Me.chkUnkResistPoison.Location = New System.Drawing.Point(7, 57)
         Me.chkUnkResistPoison.Name = "chkUnkResistPoison"
         Me.chkUnkResistPoison.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkResistPoison.TabIndex = 27
+        Me.chkUnkResistPoison.TabIndex = 23
         Me.ttMain.SetToolTip(Me.chkUnkResistPoison, "Is Value Unknown?")
         Me.chkUnkResistPoison.UseVisualStyleBackColor = True
         '
@@ -665,7 +667,7 @@ Partial Class frmMain
         Me.chkUnkResistGeneric.Location = New System.Drawing.Point(7, 30)
         Me.chkUnkResistGeneric.Name = "chkUnkResistGeneric"
         Me.chkUnkResistGeneric.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkResistGeneric.TabIndex = 26
+        Me.chkUnkResistGeneric.TabIndex = 21
         Me.ttMain.SetToolTip(Me.chkUnkResistGeneric, "Is Value Unknown?")
         Me.chkUnkResistGeneric.UseVisualStyleBackColor = True
         '
@@ -685,7 +687,7 @@ Partial Class frmMain
         Me.nudResistFire.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudResistFire.Name = "nudResistFire"
         Me.nudResistFire.Size = New System.Drawing.Size(101, 20)
-        Me.nudResistFire.TabIndex = 10
+        Me.nudResistFire.TabIndex = 26
         '
         'nudResistPoison
         '
@@ -694,7 +696,7 @@ Partial Class frmMain
         Me.nudResistPoison.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudResistPoison.Name = "nudResistPoison"
         Me.nudResistPoison.Size = New System.Drawing.Size(101, 20)
-        Me.nudResistPoison.TabIndex = 9
+        Me.nudResistPoison.TabIndex = 24
         '
         'nudResistGeneric
         '
@@ -703,7 +705,7 @@ Partial Class frmMain
         Me.nudResistGeneric.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudResistGeneric.Name = "nudResistGeneric"
         Me.nudResistGeneric.Size = New System.Drawing.Size(101, 20)
-        Me.nudResistGeneric.TabIndex = 8
+        Me.nudResistGeneric.TabIndex = 22
         '
         'Label11
         '
@@ -795,7 +797,7 @@ Partial Class frmMain
         Me.chkUnkItemManaInvested.Location = New System.Drawing.Point(17, 327)
         Me.chkUnkItemManaInvested.Name = "chkUnkItemManaInvested"
         Me.chkUnkItemManaInvested.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkItemManaInvested.TabIndex = 41
+        Me.chkUnkItemManaInvested.TabIndex = 51
         Me.ttMain.SetToolTip(Me.chkUnkItemManaInvested, "Is Value Unknown?")
         Me.chkUnkItemManaInvested.UseVisualStyleBackColor = True
         '
@@ -805,7 +807,7 @@ Partial Class frmMain
         Me.chkUnkItemLevel.Location = New System.Drawing.Point(17, 299)
         Me.chkUnkItemLevel.Name = "chkUnkItemLevel"
         Me.chkUnkItemLevel.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkItemLevel.TabIndex = 40
+        Me.chkUnkItemLevel.TabIndex = 49
         Me.ttMain.SetToolTip(Me.chkUnkItemLevel, "Is Value Unknown?")
         Me.chkUnkItemLevel.UseVisualStyleBackColor = True
         '
@@ -815,7 +817,7 @@ Partial Class frmMain
         Me.chkUnkItemMaxLevel.Location = New System.Drawing.Point(17, 271)
         Me.chkUnkItemMaxLevel.Name = "chkUnkItemMaxLevel"
         Me.chkUnkItemMaxLevel.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkItemMaxLevel.TabIndex = 39
+        Me.chkUnkItemMaxLevel.TabIndex = 47
         Me.ttMain.SetToolTip(Me.chkUnkItemMaxLevel, "Is Value Unknown?")
         Me.chkUnkItemMaxLevel.UseVisualStyleBackColor = True
         '
@@ -825,7 +827,7 @@ Partial Class frmMain
         Me.chkUnkItemAttackSpeed.Location = New System.Drawing.Point(17, 243)
         Me.chkUnkItemAttackSpeed.Name = "chkUnkItemAttackSpeed"
         Me.chkUnkItemAttackSpeed.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkItemAttackSpeed.TabIndex = 38
+        Me.chkUnkItemAttackSpeed.TabIndex = 45
         Me.ttMain.SetToolTip(Me.chkUnkItemAttackSpeed, "Is Value Unknown?")
         Me.chkUnkItemAttackSpeed.UseVisualStyleBackColor = True
         '
@@ -835,7 +837,7 @@ Partial Class frmMain
         Me.chkUnkItemAmmoCap.Location = New System.Drawing.Point(17, 215)
         Me.chkUnkItemAmmoCap.Name = "chkUnkItemAmmoCap"
         Me.chkUnkItemAmmoCap.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkItemAmmoCap.TabIndex = 37
+        Me.chkUnkItemAmmoCap.TabIndex = 43
         Me.ttMain.SetToolTip(Me.chkUnkItemAmmoCap, "Is Value Unknown?")
         Me.chkUnkItemAmmoCap.UseVisualStyleBackColor = True
         '
@@ -845,7 +847,7 @@ Partial Class frmMain
         Me.chkUnkItemKnockback.Location = New System.Drawing.Point(17, 187)
         Me.chkUnkItemKnockback.Name = "chkUnkItemKnockback"
         Me.chkUnkItemKnockback.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkItemKnockback.TabIndex = 36
+        Me.chkUnkItemKnockback.TabIndex = 41
         Me.ttMain.SetToolTip(Me.chkUnkItemKnockback, "Is Value Unknown?")
         Me.chkUnkItemKnockback.UseVisualStyleBackColor = True
         '
@@ -855,7 +857,7 @@ Partial Class frmMain
         Me.chkUnkItemLocked.Location = New System.Drawing.Point(17, 164)
         Me.chkUnkItemLocked.Name = "chkUnkItemLocked"
         Me.chkUnkItemLocked.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkItemLocked.TabIndex = 35
+        Me.chkUnkItemLocked.TabIndex = 39
         Me.ttMain.SetToolTip(Me.chkUnkItemLocked, "Is Value Unknown?")
         Me.chkUnkItemLocked.UseVisualStyleBackColor = True
         '
@@ -867,7 +869,7 @@ Partial Class frmMain
         Me.chkUnkItemEleDamage.Location = New System.Drawing.Point(17, 136)
         Me.chkUnkItemEleDamage.Name = "chkUnkItemEleDamage"
         Me.chkUnkItemEleDamage.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkItemEleDamage.TabIndex = 34
+        Me.chkUnkItemEleDamage.TabIndex = 37
         Me.ttMain.SetToolTip(Me.chkUnkItemEleDamage, "Is Value Unknown?")
         Me.chkUnkItemEleDamage.UseVisualStyleBackColor = True
         '
@@ -877,7 +879,7 @@ Partial Class frmMain
         Me.chkUnkItemEleType.Location = New System.Drawing.Point(17, 108)
         Me.chkUnkItemEleType.Name = "chkUnkItemEleType"
         Me.chkUnkItemEleType.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkItemEleType.TabIndex = 33
+        Me.chkUnkItemEleType.TabIndex = 35
         Me.ttMain.SetToolTip(Me.chkUnkItemEleType, "Is Value Unknown?")
         Me.chkUnkItemEleType.UseVisualStyleBackColor = True
         '
@@ -887,7 +889,7 @@ Partial Class frmMain
         Me.chkUnkItemProjSpeed.Location = New System.Drawing.Point(17, 79)
         Me.chkUnkItemProjSpeed.Name = "chkUnkItemProjSpeed"
         Me.chkUnkItemProjSpeed.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkItemProjSpeed.TabIndex = 32
+        Me.chkUnkItemProjSpeed.TabIndex = 33
         Me.ttMain.SetToolTip(Me.chkUnkItemProjSpeed, "Is Value Unknown?")
         Me.chkUnkItemProjSpeed.UseVisualStyleBackColor = True
         '
@@ -909,7 +911,7 @@ Partial Class frmMain
         Me.chkUnkItemDamage.Location = New System.Drawing.Point(17, 23)
         Me.chkUnkItemDamage.Name = "chkUnkItemDamage"
         Me.chkUnkItemDamage.Size = New System.Drawing.Size(15, 14)
-        Me.chkUnkItemDamage.TabIndex = 30
+        Me.chkUnkItemDamage.TabIndex = 29
         Me.ttMain.SetToolTip(Me.chkUnkItemDamage, "Is Value Unknown?")
         Me.chkUnkItemDamage.UseVisualStyleBackColor = True
         '
@@ -921,7 +923,7 @@ Partial Class frmMain
         Me.nudItemManaInvested.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudItemManaInvested.Name = "nudItemManaInvested"
         Me.nudItemManaInvested.Size = New System.Drawing.Size(101, 20)
-        Me.nudItemManaInvested.TabIndex = 29
+        Me.nudItemManaInvested.TabIndex = 52
         '
         'Label26
         '
@@ -939,7 +941,7 @@ Partial Class frmMain
         Me.nudItemLevel.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudItemLevel.Name = "nudItemLevel"
         Me.nudItemLevel.Size = New System.Drawing.Size(101, 20)
-        Me.nudItemLevel.TabIndex = 27
+        Me.nudItemLevel.TabIndex = 50
         '
         'Label25
         '
@@ -957,7 +959,7 @@ Partial Class frmMain
         Me.nudItemMaxLevel.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudItemMaxLevel.Name = "nudItemMaxLevel"
         Me.nudItemMaxLevel.Size = New System.Drawing.Size(101, 20)
-        Me.nudItemMaxLevel.TabIndex = 25
+        Me.nudItemMaxLevel.TabIndex = 48
         '
         'Label24
         '
@@ -975,7 +977,7 @@ Partial Class frmMain
         Me.nudItemAttackSpeed.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudItemAttackSpeed.Name = "nudItemAttackSpeed"
         Me.nudItemAttackSpeed.Size = New System.Drawing.Size(101, 20)
-        Me.nudItemAttackSpeed.TabIndex = 23
+        Me.nudItemAttackSpeed.TabIndex = 46
         '
         'Label23
         '
@@ -993,7 +995,7 @@ Partial Class frmMain
         Me.nudItemAmmoCap.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudItemAmmoCap.Name = "nudItemAmmoCap"
         Me.nudItemAmmoCap.Size = New System.Drawing.Size(101, 20)
-        Me.nudItemAmmoCap.TabIndex = 21
+        Me.nudItemAmmoCap.TabIndex = 44
         '
         'Label22
         '
@@ -1011,7 +1013,7 @@ Partial Class frmMain
         Me.nudItemKnockback.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudItemKnockback.Name = "nudItemKnockback"
         Me.nudItemKnockback.Size = New System.Drawing.Size(101, 20)
-        Me.nudItemKnockback.TabIndex = 19
+        Me.nudItemKnockback.TabIndex = 42
         '
         'Label21
         '
@@ -1028,7 +1030,7 @@ Partial Class frmMain
         Me.chkItemLocked.Location = New System.Drawing.Point(184, 164)
         Me.chkItemLocked.Name = "chkItemLocked"
         Me.chkItemLocked.Size = New System.Drawing.Size(15, 14)
-        Me.chkItemLocked.TabIndex = 17
+        Me.chkItemLocked.TabIndex = 40
         Me.chkItemLocked.UseVisualStyleBackColor = True
         '
         'cmbItemEleType
@@ -1039,7 +1041,7 @@ Partial Class frmMain
         Me.cmbItemEleType.Location = New System.Drawing.Point(184, 104)
         Me.cmbItemEleType.Name = "cmbItemEleType"
         Me.cmbItemEleType.Size = New System.Drawing.Size(101, 22)
-        Me.cmbItemEleType.TabIndex = 16
+        Me.cmbItemEleType.TabIndex = 36
         '
         'Label15
         '
@@ -1058,7 +1060,7 @@ Partial Class frmMain
         Me.nudItemEleDamage.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudItemEleDamage.Name = "nudItemEleDamage"
         Me.nudItemEleDamage.Size = New System.Drawing.Size(101, 20)
-        Me.nudItemEleDamage.TabIndex = 13
+        Me.nudItemEleDamage.TabIndex = 38
         '
         'Label16
         '
@@ -1076,7 +1078,7 @@ Partial Class frmMain
         Me.nudItemProjSpeed.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudItemProjSpeed.Name = "nudItemProjSpeed"
         Me.nudItemProjSpeed.Size = New System.Drawing.Size(101, 20)
-        Me.nudItemProjSpeed.TabIndex = 10
+        Me.nudItemProjSpeed.TabIndex = 34
         '
         'nudItemProjCnt
         '
@@ -1085,7 +1087,7 @@ Partial Class frmMain
         Me.nudItemProjCnt.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudItemProjCnt.Name = "nudItemProjCnt"
         Me.nudItemProjCnt.Size = New System.Drawing.Size(101, 20)
-        Me.nudItemProjCnt.TabIndex = 9
+        Me.nudItemProjCnt.TabIndex = 32
         '
         'nudItemDamage
         '
@@ -1095,7 +1097,7 @@ Partial Class frmMain
         Me.nudItemDamage.Minimum = New Decimal(New Integer() {-2147483648, 0, 0, -2147483648})
         Me.nudItemDamage.Name = "nudItemDamage"
         Me.nudItemDamage.Size = New System.Drawing.Size(101, 20)
-        Me.nudItemDamage.TabIndex = 8
+        Me.nudItemDamage.TabIndex = 30
         '
         'Label17
         '
@@ -1139,7 +1141,7 @@ Partial Class frmMain
         Me.grpAoB.ForeColor = System.Drawing.Color.White
         Me.grpAoB.Location = New System.Drawing.Point(236, 390)
         Me.grpAoB.Name = "grpAoB"
-        Me.grpAoB.Size = New System.Drawing.Size(297, 137)
+        Me.grpAoB.Size = New System.Drawing.Size(297, 127)
         Me.grpAoB.TabIndex = 17
         Me.grpAoB.TabStop = False
         Me.grpAoB.Text = "AoB"
@@ -1151,8 +1153,8 @@ Partial Class frmMain
         Me.txtAoB.Name = "txtAoB"
         Me.txtAoB.ReadOnly = True
         Me.txtAoB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtAoB.Size = New System.Drawing.Size(283, 105)
-        Me.txtAoB.TabIndex = 0
+        Me.txtAoB.Size = New System.Drawing.Size(283, 96)
+        Me.txtAoB.TabIndex = 53
         '
         'tmrAoBUpdate
         '
@@ -1164,7 +1166,7 @@ Partial Class frmMain
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlwaysOnTopToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlwaysOnTopToolStripMenuItem, Me.AoBCompareToolStripMenuItem})
         Me.ViewToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
@@ -1178,12 +1180,19 @@ Partial Class frmMain
         Me.AlwaysOnTopToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.AlwaysOnTopToolStripMenuItem.Text = "&Always On Top"
         '
+        'AoBCompareToolStripMenuItem
+        '
+        Me.AoBCompareToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.AoBCompareToolStripMenuItem.Name = "AoBCompareToolStripMenuItem"
+        Me.AoBCompareToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+        Me.AoBCompareToolStripMenuItem.Text = "AoB Compare"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(544, 539)
+        Me.ClientSize = New System.Drawing.Size(544, 525)
         Me.Controls.Add(Me.grpAoB)
         Me.Controls.Add(Me.grpItem)
         Me.Controls.Add(Me.grpResist)
@@ -1339,5 +1348,6 @@ Partial Class frmMain
     Friend WithEvents ofd As System.Windows.Forms.OpenFileDialog
     Friend WithEvents ViewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AlwaysOnTopToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AoBCompareToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

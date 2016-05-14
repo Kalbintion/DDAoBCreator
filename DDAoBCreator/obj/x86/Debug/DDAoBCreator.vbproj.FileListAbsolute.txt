@@ -7,3 +7,4 @@ C:\Projects\VS10\DDAoBCreator\DDAoBCreator\obj\x86\Debug\DDAoBCreator.exe
 C:\Projects\VS10\DDAoBCreator\DDAoBCreator\obj\x86\Debug\DDAoBCreator.xml
 C:\Projects\VS10\DDAoBCreator\DDAoBCreator\obj\x86\Debug\DDAoBCreator.pdb
 C:\Projects\VS10\DDAoBCreator\DDAoBCreator\obj\x86\Debug\DDAoBCreator.frmMain.resources
+C:\Projects\VS10\DDAoBCreator\DDAoBCreator\obj\x86\Debug\DDAoBCreator.frmCompare.resources
