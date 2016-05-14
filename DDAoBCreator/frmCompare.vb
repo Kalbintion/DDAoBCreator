@@ -22,29 +22,27 @@
 
         For i As Integer = 0 To lList.Length - 1 Step 1
             pbStatus.Value = i
-            If MarkDifferencesToolStripMenuItem.Checked And lList(i) <> rList(i) Then
-                ' Format this specific location: (i * 2) + i to (i * 2) + i + 2
-                rtbL.Select((i * 2) + i, 2)
-                rtbR.Select((i * 2) + i, 2)
 
+            ' Format this specific location: (i * 2) + i to (i * 2) + i + 2
+            rtbL.Select((i * 2) + i, 2)
+            rtbR.Select((i * 2) + i, 2)
+            If MarkDifferencesToolStripMenuItem.Checked And lList(i) <> rList(i) Then
                 rtbL.SelectionBackColor = Color.Red
                 rtbR.SelectionBackColor = Color.Red
 
-                rtbL.Select(0, 0)
-                rtbR.Select(0, 0)
             End If
             If MarkSameToolStripMenuItem.Checked And lList(i) = rList(i) Then
-                rtbL.Select((i * 2) + i, 2)
-                rtbR.Select((i * 2) + i, 2)
+                If Allow00MatchingToolStripMenuItem.Checked = False And lList(i) = "00" Then
+                    GoTo nextEle
+                End If
 
                 rtbL.SelectionBackColor = Color.Green
                 rtbR.SelectionBackColor = Color.Green
-
-                rtbL.Select(0, 0)
-                rtbR.Select(0, 0)
             End If
+            rtbL.Select(0, 0)
+            rtbR.Select(0, 0)
+nextEle:
         Next
-
     End Sub
 
     Private Sub btnReset_Click(sender As System.Object, e As System.EventArgs) Handles btnReset.Click

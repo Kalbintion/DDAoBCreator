@@ -35,6 +35,7 @@ Partial Class frmCompare
         Me.MarkSameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.pbStatus = New System.Windows.Forms.ProgressBar()
+        Me.Allow00MatchingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -149,6 +150,7 @@ Partial Class frmCompare
         'MarkSameToolStripMenuItem
         '
         Me.MarkSameToolStripMenuItem.CheckOnClick = True
+        Me.MarkSameToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Allow00MatchingToolStripMenuItem})
         Me.MarkSameToolStripMenuItem.Name = "MarkSameToolStripMenuItem"
         Me.MarkSameToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.MarkSameToolStripMenuItem.Text = "Mark Same"
@@ -162,6 +164,13 @@ Partial Class frmCompare
         Me.pbStatus.Size = New System.Drawing.Size(359, 23)
         Me.pbStatus.TabIndex = 7
         '
+        'Allow00MatchingToolStripMenuItem
+        '
+        Me.Allow00MatchingToolStripMenuItem.CheckOnClick = True
+        Me.Allow00MatchingToolStripMenuItem.Name = "Allow00MatchingToolStripMenuItem"
+        Me.Allow00MatchingToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
+        Me.Allow00MatchingToolStripMenuItem.Text = "Allow 00 Matching"
+        '
         'frmCompare
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -172,7 +181,7 @@ Partial Class frmCompare
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.MinimumSize = New System.Drawing.Size(174, 345)
         Me.Name = "frmCompare"
-        Me.Text = "frmCompare"
+        Me.Text = "AoB Compare"
         Me.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
@@ -195,4 +204,5 @@ Partial Class frmCompare
     Friend WithEvents MarkSameToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents pbStatus As System.Windows.Forms.ProgressBar
+    Friend WithEvents Allow00MatchingToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
